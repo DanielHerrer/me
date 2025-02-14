@@ -1,0 +1,153 @@
+/* 
+Cambiar algunas tipografías.
+●Centrar algunos elementos.
+●Agregar contenido en forma de listas
+●Cambiar de color letras y fondos 
+*/
+
+/*
+  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Red Hat Display', sans-serif; 
+*/
+
+:root{
+    --font-title: 'Bebas Neue', sans-serif;
+    --font-subtitle: none;
+    --font-text: 'Red Hat Display', sans-serif;
+    --color-primary: #e79c6b;
+    --color-secondary: #b2d4f0;
+    --color-tertiary: #222223;
+    --size-font-s: 16px;
+    --size-font-m: 24px;
+    --size-font-l: 75px;
+}
+
+* {
+    font-family: var(--font-text);    
+}
+
+body {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container-main {
+    margin: 0px;
+    padding: 4vh 20vw;
+    background-color: var(--color-tertiary);
+    display: block;
+}
+
+.head {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    /* background-color: var(--color-primary); */
+
+}
+
+.head-top {
+    width: 100%;
+    /* display: inline-block; */
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+img.pic {
+    display: inline-block;
+    width: 12.5%;
+    border-radius: 50%;
+    vertical-align: top;
+    margin: 1vh 1vw;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+h2.name {
+    display: inline-block;
+    padding: 0px;
+    margin: 2vh 1vw;
+    vertical-align: top;
+    font-family: var(--font-title);
+    font-size: var(--size-font-l);
+    color: #a72cff;
+    text-shadow: 0 0 15px rgba(174, 0, 255, 0.4);
+}
+
+.head-bot {
+    text-align: center;
+    margin-bottom: 3vh;
+    padding: 0px;
+}
+
+.head-bot-item {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-tertiary);
+    padding: 0.1vh 1vw;
+    margin: 1vh 0.2vw 3vh 0.2vw;
+    border-radius: 25px;
+    font-size: var(--size-font-s);
+}
+
+.head-bot-item p {
+    color: var(--color-tertiary);
+    padding: 5px 10px;
+    margin: 0;
+}
+
+.container-field {
+    margin-bottom: 6vh;
+}
+
+.container-field .field {
+    background-color: var(--color-secondary);
+    border: 0px none #FFFFFF;
+    border-radius: 25px;
+}
+
+.container-field .field .field-about {
+    width: auto;
+    background-color: white;
+    padding: 1vh 2vw;
+    margin: -20px 0 0 15px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: var(--size-font-m);
+    float: left;
+}
+
+
+.container-field .field .field-content {
+    background-color: var(--color-secondary);
+    margin: 3vh 3vw;
+    font-size: var(--size-font-s);
+}
+
+.container-field .field .field-content-web {
+    background-color: var(--color-secondary);
+    margin: 3vh 3vw;
+    font-size: var(--size-font-s);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;  
+}
+
+.container-field .field .field-content-web .card-web {
+    background-color: white;
+    border-radius: 15px;
+    color: black;
+    margin: 10px 10px;
+    padding-top: 15px;
+    width: 30%;
+    text-align: center;
+}
+
+.container-field .field .field-content-web .card-web img {
+    width: 100%;
+}
+
+.field-exp ul li:nth-child(4), .field-exp ul li:nth-child(5){
+    opacity: 0.5;
+}
