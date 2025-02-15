@@ -14,9 +14,11 @@ Cambiar algunas tipografías.
     --font-title: 'Bebas Neue', sans-serif;
     --font-subtitle: none;
     --font-text: 'Red Hat Display', sans-serif;
-    --color-primary: #e79c6b;
-    --color-secondary: #b2d4f0;
-    --color-tertiary: #222223;
+    --color-primary: rgba(141,228,28,1);
+    --color-secondary: rgba(246,40,125,1);
+    --color-tertiary: rgb(103, 39, 176);
+    --color-fourth: rgb(42, 12, 98);
+    --color-fifth: rgba(10,3,36,1);
     --size-font-s: 16px;
     --size-font-m: 24px;
     --size-font-l: 75px;
@@ -35,7 +37,7 @@ body {
 .container-main {
     margin: 0px;
     padding: 4vh 20vw;
-    background-color: var(--color-tertiary);
+    background-color: var(--color-fifth);
     display: block;
 }
 
@@ -102,15 +104,16 @@ h2.name {
 }
 
 .container-field .field {
-    background-color: var(--color-secondary);
+    background-color: var(--color-fourth);
     border: 0px none #FFFFFF;
     border-radius: 25px;
 }
 
 .container-field .field .field-about {
     width: auto;
-    background-color: white;
-    padding: 1vh 2vw;
+    background-color: var(--color-tertiary);
+    color: white;
+    padding: 0.6vh 1.6vw;
     margin: -20px 0 0 15px;
     border-radius: 15px;
     font-weight: bold;
@@ -120,29 +123,45 @@ h2.name {
 
 
 .container-field .field .field-content {
-    background-color: var(--color-secondary);
-    margin: 3vh 3vw;
+    margin: 5vh 3vw 3vh 3vw;
     font-size: var(--size-font-s);
+    color: white;
 }
 
 .container-field .field .field-content-web {
-    background-color: var(--color-secondary);
-    margin: 3vh 3vw;
+    margin: 5vh 3vw 3vh 3vw;
     font-size: var(--size-font-s);
     display: flex;
     flex-wrap: wrap;
-    align-content: center;  
+    justify-content: center;  
 }
 
 .container-field .field .field-content-web .card-web {
+    width: 30%;
+    text-decoration: none;
     background-color: white;
     border-radius: 15px;
     color: black;
     margin: 10px 10px;
     padding-top: 15px;
-    width: 30%;
     text-align: center;
 }
+
+.container-field .field .field-content-web .card-web .card-title {
+    padding: 2px 2px;
+}
+
+.container-field .field .field-content-web .card-web .card-about {
+    color: rgb(112, 112, 112);
+    font-size: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 1px solid rgb(188, 188, 188);
+    padding: 6px 3px 3px 3px;
+    margin: 0px 10px;
+}
+
+
 
 .container-field .field .field-content-web .card-web img {
     width: 100%;
@@ -151,3 +170,63 @@ h2.name {
 .field-exp ul li:nth-child(4), .field-exp ul li:nth-child(5){
     opacity: 0.5;
 }
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+/* Pantallas pequeñas (móviles): Consultas para pantallas con un ancho menor a 576 píxeles. */
+@media (max-width: 575px) {
+    .container-main {
+        padding: 4vh 5vw !important;
+    }
+
+    img.pic {
+        width: 50%;
+        margin: 1vh 1vw;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    }
+    
+    .head-bot-item {
+        padding: 0.1vh 1vw;
+        margin: 1vh 0.2vw 1vh 0.2vw;
+    }
+
+    .container-field .field .field-content-web {
+        margin: 5vh 3vw 3vh 3vw;
+    }
+    
+    .container-field .field .field-content-web .card-web {
+        width: 28%;
+    }
+}
+
+/* Tabletas y pantallas medianas: Consultas para pantallas con un ancho entre 576 y 991 píxeles. */
+@media (min-width: 576px) and (max-width: 991px) {
+    .container-main {
+        padding: 4vh 10vw !important;
+    }
+
+    img.pic {
+        width: 50%;
+        margin: 1vh 1vw;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    }
+    
+
+    .head-bot-item {
+        padding: 0.1vh 1vw;
+        margin: 1vh 0.2vw 1vh 0.2vw;
+    }
+
+    .container-field .field .field-content-web {
+        margin: 5vh 3vw 3vh 3vw;
+    }
+    
+    .container-field .field .field-content-web .card-web {
+        width: 28%;
+    }
+}
+
+/* Pantallas grandes (escritorio): Consultas para pantallas con un ancho igual o superior a 992 píxeles. */
+@media (min-width: 992px) {}
