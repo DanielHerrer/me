@@ -8,7 +8,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Font Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,69 +19,95 @@
     <!-- <link rel="stylesheet" href="./styles/reset.css"> -->
     <!-- CSS -->
     <link rel="stylesheet" href="./styles/index.css">
-    <link rel="icon" type="image/png" href="./imgs/icon_cv.png">
+    <link rel="icon" type="image/png" href="./imgs/pic_me.jpg">
     <title>Portfolio Daniel</title>
 </head>
 <body>
     <main class="container-main">
-        <header class="head">
-            <div class="head-top">
-                <img class="pic" src="./imgs/pic_me.jpg"/>
-                <h2 class="name">Daniel Franco Herrera</h2>                
+
+        <nav class="nav">
+            <ul class="nav-menu">
+                <li><a id="nav-1" href="#perfil">Perfil</a></li>
+                <li><a id="nav-2" href="#proyectos">Proyectos</a></li>
+                <li><a id="nav-3" href="#educacion">Educación</a></li>
+                <li><a id="nav-4" href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="nav-btns">
+                <button class="nav-btn" id="btn-language">
+                    <i class="fa-solid fa-globe"></i>                   
+                    <span id="in-language">EN</span>
+                </button>
+                <button class="nav-btn" id="btn-theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
             </div>
-            <div class="head-bot">
-                <div class="head-bot-item"><p><b>2234980241</p></b></div>
-                <div class="head-bot-item"><p><b>Mar del Plata, Buenos Aires</p></b></div>
-                <div class="head-bot-item"><p><b>danielhazzer2009@gmail.com</p></b></div>
+        </nav>
+
+        <header class="head">
+            <div class="head-left">
+                <div class="border-pic">
+                    <img class="pic" src="./imgs/pic_me.jpg" alt="Foto de perfil">
+                </div>
+                <div class="tag">
+                  <div class="tag-inner">
+                    <div class="circle">
+                        <div class="circleShine"></div>
+                    </div>
+                    <span id="tag-text">¡Buscando nuevos desafíos! 🚀</span>
+                  </div>
+                </div>
+            </div>
+              
+              
+            <div class="head-right">
+                <span id="hi" class="head-right-hi">Hola! Mi nombre es</span>
+                <span class="head-right-name">Daniel Herrera</span>
+                <span class="head-right-rol">Java Developer <------------------------------</span>
+                <div id="about" class="head-right-about">
+                    Soy estudiante de la Tecnicatura Universitaria en Programación en UTN. 
+                    Con experiencia en proyectos academicos y personales con Java, 
+                    Spring, MySQL, HTML y JavaScript, estoy en constante búsqueda de oportunidades para crecer, 
+                    aportar y seguir aprendiendo.
+                </div>
+                <div class="head-right-items">
+                    <a id="download-cv" href="./docs/CV-DanielHerrera.docx" class="head-right-item-cv" download>
+                        <i class="fa-solid fa-download"></i>
+                        Descargar CV
+                    </a>
+                    <div class="head-right-subitems">
+                        <a class="head-right-subitem" href="mailto:danielhazzer2009@gmail.com" rel="noreferrer" aria-label="Enviar email"><i class="fa-solid fa-envelope"></i></a>
+                        <a class="head-right-subitem" href="https://linkedin.com/in/danielfrancoherrera" target="_blank" rel="noopener noreferrer" aria-label="Perfil de LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a class="head-right-subitem" href="https://github.com/DanielHerrer" target="_blank" rel="noopener noreferrer" aria-label="Perfil de GitHub"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
             </div>
         </header>
         <div class="container-body">
 
             <div class="container-field">
-                <fieldset class="field">
-                    <legend class="field-about">Sobre mí</legend>
-                    <div class="field-content">
-                        Soy una persona
-                        meticulosa y orientada al detalle, lo que me permite asegurar calidad y
-                        organización en cada
-                        proyecto que emprendo. Trabajo con consistencia,
-                        valorando la precisión y la entrega puntual.
-                        Me apasiona trabajar en equipo, colaborar, aprender de mis compañeros, y dar lo mejor de mí.
+                <div class="field">
+                    <div class="field-about">
+                        <h3 id="title-academic">Formación Academica</h3>
+                        <h5 id="description-academic">Experiencia a través de trayectos de caracter academico.</h5>
                     </div>
-                </fieldset>
-            </div>
-
-            <div class="container-field">
-                <fieldset class="field">
-                    <legend class="field-about">Formacion Academica</legend>
                     <div class="field-content">
                         <ul>
-                            <li>Estudios Secundarios: Técnico en Informática Pers. y Prof. · EEST Nº2</li>
-                            <li>Estudios Universitarios: Técnico Universitario en Programación · U.T.N.</li>
+                            <li>Técnico en Informática · EEST Nº2</li>
+                            <li>Técnico Universitario en Programación · U.T.N.</li>
                         </ul>
                     </div>
-                </fieldset>
+                </div>
             </div>
 
             <div class="container-field">
-                <fieldset class="field">
-                    <legend class="field-about">Experiencia</legend>
-                    <div class="field-content">
-                        Actualmente estoy formándome en la U.T.N. como Técnico Universitario en Programación. 
-                        Me certifique como Backend Dev en Java utilizando el framework de Spring habiendo pasado
-                        por 4 desafíos finales en cada tramo, gracias al programa ONE (Oracle Next Education) 
-                        en conjunto con AluraLatam. 
-                        También concluí mi trayecto académico en Egg Live, al cual accedí gracias a la propuesta
-                        de Argentina Programa (4.0), donde pude aprender fundamentos en Java, tecnologías de diseño web,
-                        bases de datos relacionales y Spring combinando el front-back para un proyecto final.
+                <div class="field">
+                    <div class="field-about">
+                        <h3>Proyectos Realizados</h3>
+                        <h5>Experiencia a través de trayectos de caracter academico.</h5>
                     </div>
-                </fieldset>
-            </div>
-
-            <div class="container-field">
-                <fieldset class="field">
-                    <legend class="field-about">Proyectos Realizados</legend>
                     <div class="field-content-web">
+
                         <a class="card-web" href="https://github.com/DanielHerrer/TP_Hangar2_UTN/" target="_blank" rel="noopener noreferrer">
                             <img src="./imgs/web_hangar2.jpg" alt="web">
                             <h5 class="card-title">Sistema Hangar 2.0</h5>
@@ -149,7 +177,7 @@
                             </div>
                         </a>
                     </div>
-                </fieldset>
+                </div>
             </div>
             <div class="container-field">
                 <fieldset class="field">
@@ -196,5 +224,67 @@
             </div> 
         </div>
     </main>
+    <script>
+        // Boton Theme
+        const btnTheme = document.getElementById('btn-theme');
+        let isLight = true;
+
+        btnTheme.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            if (isLight) {
+                btnTheme.innerHTML = '<i class="fa-solid fa-moon"></i>';
+            } else {
+                btnTheme.innerHTML = '<i class="fa-solid fa-sun"></i>';
+            }
+            isLight = !isLight;
+        });
+        // Boton Idioma
+        const btnLanguage = document.getElementById('btn-language');
+        let isSpanish = true;
+        btnLanguage.addEventListener('click', () => {
+            if (isSpanish) {
+                // nav
+                document.getElementById('nav-1').textContent = "Profile";
+                document.getElementById('nav-2').textContent = "Projects";
+                document.getElementById('nav-3').textContent = "Education";
+                document.getElementById('nav-4').textContent = "Contact";
+                document.getElementById('in-language').textContent = "ES";
+                // header
+                document.getElementById('tag-text').textContent = "¡Looking for new challenges! 🚀";
+                document.getElementById('hi').textContent = "Hello! My name is";
+                document.getElementById('about').textContent = "I'm a student in the University of Buenos Aires (UTN) Programming Program."+
+                    " With experience in academic and personal projects using Java, Spring, MySQL, HTML, and JavaScript, "+
+                    "I'm constantly looking for opportunities to grow, contribute, and continue learning.";
+                document.getElementById('download-cv').innerHTML = 
+                        '<i class="fa-solid fa-download"></i>'+
+                        ' Download CV';
+                // fields
+                document.getElementById('title-academic').innerText = "Academic Training";
+                document.getElementById('description-academic').innerText = "Experience through academic paths.";
+            } else {
+                // nav
+                document.getElementById('nav-1').textContent = "Perfil";
+                document.getElementById('nav-2').textContent = "Proyectos";
+                document.getElementById('nav-3').textContent = "Educación";
+                document.getElementById('nav-4').textContent = "Contacto";
+                document.getElementById('in-language').textContent = "EN";
+                // header
+                document.getElementById('tag-text').textContent = "¡Buscando nuevos desafíos! 🚀";
+                document.getElementById('hi').textContent = "Hola! Mi nombre es";
+                document.getElementById('about').textContent = "Soy estudiante de la Tecnicatura Universitaria en Programación en UTN."+
+                    "Con experiencia en proyectos academicos y personales con Java,"+ 
+                    "Spring, MySQL, HTML y JavaScript, estoy en constante búsqueda de oportunidades para crecer, "+ 
+                    "aportar y seguir aprendiendo." ;
+                document.getElementById('download-cv').innerHTML = 
+                        '<i class="fa-solid fa-download"></i>'+
+                        ' Descargar CV';
+                // fields
+                document.getElementById('title-academic').innerText = "Formación Academica";
+                document.getElementById('description-academic').innerText = "Experiencia a través de trayectos de caracter academico.";
+            }
+            isSpanish = !isSpanish; // cambia de estado
+        });
+
+    </script>
 </body>
 </html>
