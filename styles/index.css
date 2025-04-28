@@ -19,9 +19,9 @@ Cambiar algunas tipografías.
     --color-tertiary: #0077ff5b;
     --color-main: #33a6e9;
     --color-text: white;
-    --size-font-s: 16px;
-    --size-font-m: 24px;
-    --size-font-l: 75px;
+    --size-font-s: 1rem;
+    --size-font-m: 1.5rem;
+    --size-font-l: 4.7rem;
 }
 
 .light-mode {
@@ -132,7 +132,7 @@ body {
     /* sombra suave */
 }
 
-.tag {
+.head-left .tag {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -143,12 +143,12 @@ body {
     /* este padding simula el borde */
 
     width: 60%;
-    font-size: 0.75rem;
+    font-size: 0.6rem;
     background: linear-gradient(to right, #2c3342, #60a5fa, #2c3342);
     border-radius: 2rem;
 }
 
-.tag-inner {
+.head-left .tag .tag-inner {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -161,7 +161,7 @@ body {
     color: white;
 }
 
-.head-left .circle {
+.head-left .tag .tag-inner .circle {
     width: 10px;
     height: 10px;
     background-color: #00b819;
@@ -169,7 +169,7 @@ body {
     margin-right: 0.5rem;
 }
 
-.head-left .circleShine {
+.head-left .tag .tag-inner .circle .circleShine {
     width: 10px;
     height: 10px;
     background-color: #00b819;
@@ -184,10 +184,12 @@ body {
         transform: scale(1.1);
         opacity: 1;
     }
+
     50% {
         transform: scale(2.5);
         opacity: 0;
     }
+
     100% {
         transform: scale(1.8);
         opacity: 0;
@@ -211,10 +213,9 @@ body {
 }
 
 .head-right .head-right-name {
-    display: inline-block;
+    display: block;
     padding: 0px;
     /* margin: -1rem 0 -1.5rem 0; */
-    vertical-align: top;
     font-family: var(--font-title);
     font-size: 5rem;
     line-height: 4rem;
@@ -222,13 +223,35 @@ body {
 }
 
 .head-right .head-right-rol {
-    display: inline-block;
+    /* display: inline-block; */
     padding: 0;
     /* margin: 2vh 1vw; */
-    vertical-align: top;
     font-family: var(--font-title);
     font-size: 2rem;
     color: var(--color-main);
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.head-right .head-right-rol .arrow-line {
+    position: relative;
+    flex-grow: 1;
+    height: 2px;
+    background: var(--color-main);
+}
+
+.head-right .head-right-rol .arrow-line::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) rotate(-135deg);
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid var(--color-main);
+    border-top: 2px solid var(--color-main);
 }
 
 .head-right .head-right-about {
@@ -291,7 +314,7 @@ body {
     background-color: var(--color-main);
 }
 
-/* ------------------------------ BODY */
+/* ______________________________________ BODY __________________________________________________________ */
 
 .container-body {
     margin-top: 6vh;
@@ -319,16 +342,21 @@ body {
 .container-body .container-field .field .field-about {
     color: var(--color-text);
     padding: 3vh 1.5vw 1vh 15vw;
-    border-radius: 35px 35px 5px 5px;
-    font-weight: bold;
-    font-size: var(--size-font-m);
+    border-radius: 2.25rem 2.25rem 0.5rem 0.5rem;
     text-align: left;
     background: linear-gradient(to right,
-            rgb(42, 58, 92, 1),
-            rgba(42, 58, 92, 0.5),
-            rgba(42, 58, 92, 0));
+            rgb(69, 96, 155),
+            rgba(57, 84, 143, 0.5),
+            rgba(34, 52, 92, 0));
 }
-
+.container-body .container-field .field .field-about .field-title {
+    font-weight: bold;
+    font-size: var(--size-font-m);
+}
+.container-body .container-field .field .field-about .field-description {
+    font-size: var(--size-font-s);
+    margin-bottom: 0.5rem;
+}
 
 .container-body .container-field .field .field-content {
     margin: 7.5vh 3vw 3vh 3vw;
@@ -398,9 +426,11 @@ body {
     .nav .nav-btns {
         margin-bottom: 0.75rem;
     }
+
     .nav .nav-btns .nav-btn {
         padding: 0.5rem 1rem;
     }
+
     .head {
         display: block;
     }
@@ -439,7 +469,7 @@ body {
     }
 
     .head-right .head-right-items .head-right-item-cv {
-        
+
         margin: 0.25rem 0.5rem;
     }
 
@@ -451,6 +481,23 @@ body {
         margin: 0.25rem;
     }
 
+    .container-body .container-field .field .img-field {
+        margin: -2.5rem 0 0 1.1rem;
+        width: 8rem;
+    }
+    .container-body .container-field .field .field-about {
+        text-align: end;
+        padding: 3vh 10vw 1vh 1.5vw;
+        /* font-weight: lighter; */
+    }
+    .container-body .container-field .field .field-about .field-title {
+        font-size: var(--size-font-m);
+        margin-bottom: 0;
+    }
+    .container-body .container-field .field .field-about .field-description {
+        font-size: var(--size-font-s);
+        margin-bottom: 0;
+    }
     
 }
 
@@ -468,4 +515,3 @@ body {
 @media (min-width: 992px) {
     /* Estilos para pantallas grandes */
 }
-
