@@ -37,7 +37,7 @@ Cambiar algunas tipografías.
 }
 
 body {
-    width: 100vw;
+    width: 100%;
     margin: 0;
     padding: 0;
 }
@@ -337,10 +337,12 @@ body {
             rgba(57, 84, 143, 0.5),
             rgba(34, 52, 92, 0));
 }
+
 .container-body .container-field .field .field-about .field-title {
     font-weight: bold;
     font-size: var(--size-font-m);
 }
+
 .container-body .container-field .field .field-about .field-description {
     font-size: var(--size-font-s);
     margin-bottom: 0.5rem;
@@ -351,6 +353,150 @@ body {
     font-size: var(--size-font-s);
     color: white;
 }
+
+/* LINEA DE TIEMPO __________________________________________________________________________________ */
+
+.timeline {
+    position: relative;
+    /*max-width: 800px;*/
+    margin: auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #33a6e9;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.timeline-item {
+    padding: 0.25rem 1.25rem;
+    position: relative;
+    width: 50%;
+}
+
+/*
+.timeline-item::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    background-color: white;
+    border: 4px solid #4CAF50;
+    border-radius: 50%;
+    z-index: 1;
+}*/
+
+.timeline-item.left {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item.right {
+    left: 50%;
+    text-align: left;
+}
+
+.timeline-content {
+    padding: 1rem;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /*opacity: 0.25;*/
+}
+
+.timeline-content .academy {
+    margin-top: 0;
+}
+
+.timeline-item.left .timeline-content {
+    margin-right: 25px;
+}
+
+.timeline-item.right .timeline-content {
+    margin-left: 25px;
+}
+
+.timeline-img {
+    position: absolute;
+    top: 30%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #33a6e9;
+    background-color: white;
+    z-index: 2;
+}
+
+.timeline-item.left .timeline-img {
+    right: -25px;
+}
+
+.timeline-item.right .timeline-img {
+    left: -25px;
+}
+
+.timeline-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.timeline h3 {
+    margin: 0 0 0.2rem;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.timeline .academia {
+    font-size: 0.95rem;
+    color: #777;
+    margin-bottom: 0;
+}
+
+.timeline .fecha {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .timeline::after {
+        left: 20px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 25px;
+    }
+
+    .timeline-item.left,
+    .timeline-item.right {
+        left: 0;
+        text-align: left;
+    }
+
+    .timeline-item.left .timeline-content,
+    .timeline-item.right .timeline-content {
+        margin: 0 0 1rem 40px;
+    }
+
+    .timeline-item.left .timeline-img,
+    .timeline-item.right .timeline-img {
+        left: 0;
+    }
+}
+
+/* PROYECTOS ______________________________________________________________________________________________*/
 
 .container-body .container-field .field .field-content-web {
     margin: 5vh 3vw 3vh 3vw;
@@ -364,7 +510,7 @@ body {
     width: 30%;
     text-decoration: none;
     background-color: white;
-    border-radius: 15px;
+    border-radius: 8px;
     color: black;
     margin: 10px 10px;
     padding-top: 15px;
@@ -473,20 +619,23 @@ body {
         margin: -2.5rem 0 0 1.1rem;
         width: 8rem;
     }
+
     .container-body .container-field .field .field-about {
         text-align: end;
         padding: 3vh 10vw 1vh 1.5vw;
         /* font-weight: lighter; */
     }
+
     .container-body .container-field .field .field-about .field-title {
         font-size: var(--size-font-m);
         margin-bottom: 0;
     }
+
     .container-body .container-field .field .field-about .field-description {
         font-size: var(--size-font-s);
         margin-bottom: 0;
     }
-    
+
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
@@ -504,6 +653,7 @@ body {
     .head-left .border-pic {
         margin-top: 5vh;
     }
+
     .head-right .head-right-item-cv {
         padding: 0.1rem 2rem;
         margin: 0.25rem 0.25rem;
