@@ -44,7 +44,7 @@ btnLanguage.addEventListener('click', () => {
     } else {
         // nav
         document.getElementById('nav-1').textContent = "Perfil";
-        document.getElementById('nav-2').textContent = "Educación";
+        document.getElementById('nav-2').textContent = "Aprendizaje";
         document.getElementById('nav-3').textContent = "Proyectos";
         document.getElementById('nav-4').textContent = "Contacto";
         document.getElementById('in-language').textContent = "EN";
@@ -59,7 +59,7 @@ btnLanguage.addEventListener('click', () => {
             '<i class="fa-solid fa-download"></i>' +
             ' Descargar CV';
         // fields
-        document.getElementById('title-1').innerText = "Educación";
+        document.getElementById('title-1').innerText = "Aprendizaje";
         document.getElementById('description-1').innerText = 
             "Experiencia adquirida mediante trayectos de carácter académico.";
         document.getElementById('title-2').innerText = "Proyectos";
