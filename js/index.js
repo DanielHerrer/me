@@ -18,7 +18,7 @@ btnLanguage.addEventListener('click', () => {
     if (isSpanish) {
         // nav
         document.getElementById('nav-1').textContent = "Profile";
-        document.getElementById('nav-2').textContent = "Education";
+        document.getElementById('nav-2').textContent = "Academic";
         document.getElementById('nav-3').textContent = "Projects";
         document.getElementById('nav-4').textContent = "Contact";
         document.getElementById('in-language').textContent = "ES";
@@ -32,19 +32,22 @@ btnLanguage.addEventListener('click', () => {
             '<i class="fa-solid fa-download"></i>' +
             ' Download CV';
         // fields
-        document.getElementById('title-1').innerText = "Education";
+        document.getElementById('title-1').innerText = "Academic Training";
         document.getElementById('description-1').innerText = 
             "Experience acquired through academic careers.";
-        document.getElementById('title-2').innerText = "Projects";
+        document.getElementById('title-2').innerText = "Featured Projects";
         document.getElementById('description-2').innerText = 
             "Technical challenges that apply the technologies learned.";
         document.getElementById('title-3').innerText = "Practice";
         document.getElementById('description-3').innerText = 
             "Designs made for learning purposes.";
+        document.getElementById('title-4').innerText = "Contact";
+        document.getElementById('description-4').innerText = 
+            "Any means of contact available.";
     } else {
         // nav
         document.getElementById('nav-1').textContent = "Perfil";
-        document.getElementById('nav-2').textContent = "Aprendizaje";
+        document.getElementById('nav-2').textContent = "Formación";
         document.getElementById('nav-3').textContent = "Proyectos";
         document.getElementById('nav-4').textContent = "Contacto";
         document.getElementById('in-language').textContent = "EN";
@@ -59,15 +62,18 @@ btnLanguage.addEventListener('click', () => {
             '<i class="fa-solid fa-download"></i>' +
             ' Descargar CV';
         // fields
-        document.getElementById('title-1').innerText = "Aprendizaje";
+        document.getElementById('title-1').innerText = "Formación Académica";
         document.getElementById('description-1').innerText = 
             "Experiencia adquirida mediante trayectos de carácter académico.";
-        document.getElementById('title-2').innerText = "Proyectos";
+        document.getElementById('title-2').innerText = "Proyectos Destacados";
         document.getElementById('description-2').innerText = 
             "Desafíos técnicos que aplican las técnologías aprendidas.";
         document.getElementById('title-3').innerText = "Prácticas";
         document.getElementById('description-3').innerText = 
             "Diseños realizados con fines de aprendizaje.";
+        document.getElementById('title-4').innerText = "Contacto";
+        document.getElementById('description-4').innerText = 
+            "Cualquier medio de contacto disponible.";
     }
     isSpanish = !isSpanish; // cambia de estado
 });
