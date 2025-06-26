@@ -51,6 +51,7 @@ body {
     transition: all 0.3s ease;
 }
 
+/* NAVEGADOR _________________________________________________________________ */
 .nav {
     display: flex;
     justify-content: space-between;
@@ -88,6 +89,7 @@ body {
     border-radius: 2rem;
 }
 
+/* CABECERA _________________________________________________________ */
 .head {
     width: 100%;
     margin: 0;
@@ -303,11 +305,11 @@ body {
 }
 
 /* ______________________________________ BODY __________________________________________________________ */
-
 .container-body {
     margin-top: 6vh;
 }
 
+/* ITEM DE LA PAGINA */
 .container-body .container-field {
     margin: 6vh 0;
     display: flex;
@@ -379,7 +381,7 @@ body {
     width: 50%;
 }
 
-/*
+/* PUNTO VERDE EXTRA, INNECESARIO
 .timeline-item::after {
     content: "";
     position: absolute;
@@ -391,7 +393,7 @@ body {
     border: 4px solid #4CAF50;
     border-radius: 50%;
     z-index: 1;
-}*/
+} */
 
 .timeline-item.left {
     left: 0;
@@ -473,34 +475,6 @@ body {
     margin-bottom: 0;
 }
 
-@media screen and (max-width: 768px) {
-    .timeline::after {
-        left: 20px;
-    }
-
-    .timeline-item {
-        width: 100%;
-        padding-left: 60px;
-        padding-right: 25px;
-    }
-
-    .timeline-item.left,
-    .timeline-item.right {
-        left: 0;
-        text-align: left;
-    }
-
-    .timeline-item.left .timeline-content,
-    .timeline-item.right .timeline-content {
-        margin: 0 0 1rem 40px;
-    }
-
-    .timeline-item.left .timeline-img,
-    .timeline-item.right .timeline-img {
-        left: 0;
-    }
-}
-
 /* PROYECTOS ______________________________________________________________________________________________*/
 
 .container-body .container-field .field .field-content-web {
@@ -560,6 +534,7 @@ body {
         padding: 2vh 3vw;
     }
 
+    /* NAVEGADOR _________________________________ */
     .nav {
         flex-wrap: wrap-reverse;
         justify-content: end;
@@ -579,6 +554,7 @@ body {
         padding: 0.5rem 1rem;
     }
 
+    /* CABECERAS _________________________________ */
     .head {
         display: block;
     }
@@ -617,7 +593,6 @@ body {
     }
 
     .head-right .head-right-items .head-right-item-cv {
-
         margin: 0.25rem 0.5rem;
     }
 
@@ -629,6 +604,7 @@ body {
         margin: 0.25rem;
     }
 
+    /* ITEMS BODY _________________________________ */
     .container-body .container-field .field .img-field {
         margin: -2.5rem 0 0 1.1rem;
         width: 8rem;
@@ -650,16 +626,295 @@ body {
         margin-bottom: 0;
     }
 
+    /* LINEA DE TIEMPO APRENDIZAJE _____________________ */
+    .timeline::after {
+        left: 25px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 40px;
+        padding-right: 10px;
+    }
+
+    .timeline-item.left,
+    .timeline-item.right {
+        left: 0;
+        text-align: left;
+    }
+
+    .timeline-item.left .timeline-content,
+    .timeline-item.right .timeline-content {
+        margin: 0 0 1rem 40px;
+    }
+
+    .timeline-item.left .timeline-img,
+    .timeline-item.right .timeline-img {
+        left: 0;
+    }
+
+    /* PROYECTOS _________________________________________________________*/
+    .container-body .container-field .field .field-content-web {
+        margin: 5vh 3vw 3vh 3vw;
+        font-size: var(--size-font-s);
+    }
+
+    .container-body .container-field .field .field-content-web .card-web {
+        width: 90%;
+        border-radius: 8px;
+        margin: 10px 10px;
+        padding-top: 15px;
+    }
+
 }
 
+/* ______________________________________________________________________________________________ */
 @media (min-width: 576px) and (max-width: 767px) {
+
+    /* CABECERA ______________________________________ */
     .head {
-        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
     }
+
+    .head-left {
+        width: 38%;
+        text-align: center;
+        margin: -12.5em 0 0 0;
+        padding: 0;
+        display: inline-block;
+        position: relative;
+    }
+
+    .head-left .border-pic {
+        border: 2px solid var(--color-main);
+        width: 90%;
+        display: inline-block;
+        /* margin-top: 5vh; */
+    }
+
+    .head-left .tag {
+        width: 100%;
+        justify-self: left;
+        margin: 1rem 0 0 0;
+    }
+
+    .head-right .head-right-items {
+        /* display: block; */
+        justify-content: right;
+        flex-wrap: wrap;
+
+    }
+
+    .head-right .head-right-items .head-right-item-cv {
+        margin: 0.25rem 0.5rem;
+    }
+
+    .head-right .head-right-items .head-right-subitems {
+        flex-wrap: wrap;
+        justify-content: end;
+        border: none;
+        padding: 0;
+        margin: 0.25rem;
+    }
+
+    /* NAVEGADOR _________________________________ */
+    .nav {
+        justify-content: end;
+        flex-wrap: wrap-reverse;
+        gap: 3em;
+    }
+
+    .nav .nav-menu {
+        gap: 0.75rem;
+        margin-right: 0.5rem;
+        /* width: 100%; */
+    }
+
+    .nav .nav-btns {
+        margin-bottom: 0.75rem;
+        /* width: 100%; */
+    }
+
+    .nav .nav-btns .nav-btn {
+        padding: 0.5rem 1rem;
+    }
+
+    /* ITEM APRENDIZAJE - PROYECTOS - CONTACTO */
+    .container-body .container-field .field .img-field {
+        margin: -1.5rem 0 0 1.1rem;
+        width: 9.25rem;
+    }
+
+    .container-body .container-field .field .field-about {
+        text-align: end;
+        padding: 3vh 10vw 2vh 30vw;
+        /* font-weight: lighter; */
+    }
+
+    .container-body .container-field .field .field-about .field-title {
+        font-size: var(--size-font-m);
+        margin-bottom: 0;
+    }
+
+    .container-body .container-field .field .field-about .field-description {
+        font-size: var(--size-font-s);
+        margin-bottom: 0;
+    }
+
+    /* LINEA DE TIEMPO APRENDIZAJE _____________________ */
+    .timeline::after {
+        left: 25px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 25px;
+    }
+
+    .timeline-item.left,
+    .timeline-item.right {
+        left: 0;
+        text-align: left;
+    }
+
+    .timeline-item.left .timeline-content,
+    .timeline-item.right .timeline-content {
+        margin: 0 0 1rem 40px;
+    }
+
+    .timeline-item.left .timeline-img,
+    .timeline-item.right .timeline-img {
+        left: 0;
+    }
+
+    /* PROYECTOS _________________________________________________________*/
+    .container-body .container-field .field .field-content-web {
+        margin: 5vh 3vw 3vh 3vw;
+        font-size: var(--size-font-s);
+    }
+
+    .container-body .container-field .field .field-content-web .card-web {
+        width: 90%;
+        border-radius: 8px;
+        margin: 10px 10px;
+        padding-top: 15px;
+    }
+
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
     /* Estilos para tablets grandes */
+
+    /* CABECERA ______________________________________ */
+    .head {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+    }
+
+    .head-left {
+        width: 38%;
+        text-align: center;
+        margin: -5em 0 0 0;
+        padding: 0;
+        display: inline-block;
+        position: relative;
+    }
+
+    .head-left .border-pic {
+        border: 2px solid var(--color-main);
+        width: 90%;
+        display: inline-block;
+        /* margin-top: 5vh; */
+    }
+
+    .head-left .tag {
+        width: 100%;
+        margin: 1.5em 0 0 0;
+    }
+
+    .head-right .head-right-items {
+        /* display: block; */
+        justify-content: right;
+        flex-wrap: wrap;
+
+    }
+
+    .head-right .head-right-items .head-right-item-cv {
+        margin: 0.25rem 0.5rem;
+    }
+
+    .head-right .head-right-items .head-right-subitems {
+        flex-wrap: wrap;
+        justify-content: end;
+        border: none;
+        padding: 0;
+        margin: 0.25rem;
+    }
+
+    /* ITEMS APRENDIZAJE - PROYECTOS - CONTACTO */
+    .container-body .container-field .field .img-field {
+        margin: -0.5rem 0 0 1.1rem;
+        width: 10.5rem;
+    }
+
+    .container-body .container-field .field .field-about {
+        text-align: end;
+        padding: 3vh 10vw 2vh 25vw;
+        /* font-weight: lighter; */
+    }
+
+
+    /* LINEA DE TIEMPO APRENDIZAJE _____________________ */
+    .timeline::after {
+        left: 25px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 25px;
+    }
+
+    .timeline-item.left,
+    .timeline-item.right {
+        left: 0;
+        text-align: left;
+    }
+
+    .timeline-item.left .timeline-content,
+    .timeline-item.right .timeline-content {
+        margin: 0 0 1rem 40px;
+    }
+
+    .timeline-item.left .timeline-img,
+    .timeline-item.right .timeline-img {
+        left: 0;
+    }
+
+    /* PROYECTOS _________________________________________________________*/
+    .container-body .container-field .field .field-content-web {
+        margin: 5vh 3vw 3vh 3vw;
+        font-size: var(--size-font-s);
+    }
+
+    .container-body .container-field .field .field-content-web .card-web {
+        width: 45%;
+        border-radius: 8px;
+        margin: 10px 10px;
+        padding-top: 15px;
+    }
 }
 
 /* 6. Escritorio */
@@ -669,8 +924,8 @@ body {
     }
 
     .head-right .head-right-item-cv {
-        padding: 0.1rem 2rem;
-        margin: 0.25rem 0.25rem;
+        padding: 0.1em 2em;
+        margin: 0.25em 0.25em;
         font-size: 1rem;
     }
 }
