@@ -304,7 +304,7 @@ body {
     background-color: var(--color-main);
 }
 
-/* ______________________________________ BODY __________________________________________________________ */
+/* ___________________________ BODY ___________________________ */
 .container-body {
     margin-top: 6vh;
 }
@@ -356,7 +356,7 @@ body {
     color: white;
 }
 
-/* LINEA DE TIEMPO __________________________________________________________________________________ */
+/* LINEA DE TIEMPO _______________________________________________ */
 
 .timeline {
     position: relative;
@@ -475,7 +475,7 @@ body {
     margin-bottom: 0;
 }
 
-/* PROYECTOS ______________________________________________________________________________________________*/
+/* PROYECTOS _________________________________________________*/
 
 .container-body .container-field .field .field-content-web {
     margin: 5vh 3vw 3vh 3vw;
@@ -523,9 +523,22 @@ body {
     width: 100%;
 }
 
+/* FOOTER_____________________________________- */
+.footer {
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 2em;
+}
+
+.footer p {
+    margin: 0;
+    padding: 0;
+}
+
 
 /* RESPONSIVE CSS
--------------------------------------------------- */
+------------------------------------------------------------------------------------------------------------------------ */
 
 /* minimo (min-width: 320px) and (max-width: 360px) */
 @media (max-width: 575px) {

@@ -5,6 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO básico -->
+    <title>Daniel Herrera · Portfolio</title>
+    <meta name="description" content="Portfolio de Daniel Herrera · Java Developer. Proyectos con Java, Spring, bases de datos y frontend (HTML, CSS, JS). Disponible para nuevos desafíos.">
+    <link rel="canonical" href="https://danielherrer.github.io/" />
+
+    <!-- Open Graph / Twitter (opcional pero útil) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Daniel Herrera · Portfolio">
+    <meta property="og:description" content="Java Developer · Proyectos con Java, Spring, SQL, HTML, CSS y JS.">
+    <meta property="og:image" content="./imgs/pic_me.jpg">
+    <meta property="og:locale" content="es_AR">
+
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -12,23 +25,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Font Google -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Red+Hat+Display:wght@300&display=swap"
         rel="stylesheet">
-    <!-- Reset -->
-    <!-- <link rel="stylesheet" href="./styles/reset.css"> -->
-    <!-- CSS -->
+    <!-- CSS principal -->
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="icon" type="image/png" href="./imgs/pic_me.jpg">
-    <title>Daniel Herrera · Portfolio</title>
+
+    <!-- Schema.org Person -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Daniel Herrera",
+      "jobTitle": "Java Developer",
+      "image": "./imgs/pic_me.jpg",
+      "url": "https://danielherrer.github.io/",
+      "sameAs": [
+        "https://linkedin.com/in/danielfrancoherrera",
+        "https://github.com/DanielHerrer"
+      ]
+    }
+    </script>
 </head>
 
 <body>
-    <main class="container-main">
+    <!-- Enlace de salto para accesibilidad -->
+    <a class="visually-hidden-focusable" href="#perfil">Saltar al contenido</a>
 
-        <nav class="nav">
+    <main class="container-main">
+        <!-- Navegación principal -->
+        <nav class="nav" role="navigation" aria-label="Navegación principal">
             <ul class="nav-menu">
                 <li><a id="nav-1" href="#perfil">Perfil</a></li>
                 <li><a id="nav-2" href="#formacion">Formación</a></li>
@@ -36,390 +65,396 @@
                 <li><a id="nav-4" href="#contacto">Contacto</a></li>
             </ul>
             <div class="nav-btns">
-                <button class="nav-btn" id="btn-language">
-                    <i class="fa-solid fa-globe"></i>
+                <button class="nav-btn" id="btn-language" aria-label="Cambiar idioma">
+                    <i class="fa-solid fa-globe" aria-hidden="true"></i>
                     <span id="in-language">EN</span>
                 </button>
-                <button class="nav-btn" id="btn-theme">
-                    <i class="fa-solid fa-sun"></i>
+                <button class="nav-btn" id="btn-theme" aria-label="Cambiar tema">
+                    <i class="fa-solid fa-sun" aria-hidden="true"></i>
                 </button>
             </div>
         </nav>
 
-        <header id="perfil" class="head">
+        <!-- Hero / Perfil -->
+        <header id="perfil" class="head" role="banner">
             <div class="head-left">
-                <div class="border-pic">
-                    <img class="pic" src="./imgs/pic_me.jpg" alt="Foto de perfil">
-                </div>
-                <div class="tag">
+                <figure class="border-pic">
+                    <img class="pic" src="./imgs/pic_me.jpg" alt="Foto de Daniel Herrera">
+                    <figcaption class="visually-hidden">Foto de perfil de Daniel Herrera</figcaption>
+                </figure>
+                <aside class="tag" aria-label="Estado laboral">
                     <div class="tag-inner">
-                        <div class="circle">
-                            <div class="circleShine"></div>
+                        <div class="circle" aria-hidden="true">
+                            <div class="circleShine" aria-hidden="true"></div>
                         </div>
                         <span id="tag-text">¡Buscando nuevos desafíos! 🚀</span>
                     </div>
-                </div>
+                </aside>
             </div>
 
-
             <div class="head-right">
-                <span id="hi" class="head-right-hi">Hola! Mi nombre es</span>
-                <span class="head-right-name">Daniel Herrera</span>
-                <span class="head-right-rol">Java Developer
-                    <div class="arrow-line"></div>
-                </span>
+                <p id="hi" class="head-right-hi">Hola! Mi nombre es</p>
+                <h1 class="head-right-name">Daniel Herrera</h1>
+                <p class="head-right-rol">Java Developer
+                    <span class="arrow-line" aria-hidden="true"></span>
+                </p>
 
-                <div id="about" class="head-right-about">
-                    Soy estudiante de la Tecnicatura Universitaria en Programación en UTN.
-                    Con experiencia en proyectos profesionales, personales y academicos. Utilizando tecnologías como
-                    Java,
-                    Spring, bases de datos relacionales, funcionalidades con JavaScript y lenguaje de marcado de
-                    hipertexto.
-                    Estoy en constante búsqueda de oportunidades para crecer,
-                    aportar y seguir aprendiendo.
-                </div>
+                <p id="about" class="head-right-about">
+                    <!-- DESCRIPCION SOBRE MÍ -->
+                     ...
+                </p>
                 <div class="head-right-items">
                     <a id="download-cv" href="./docs/Resume.pdf" class="head-right-item-cv" download>
-                        <i class="fa-solid fa-download"></i>
+                        <i class="fa-solid fa-download" aria-hidden="true"></i>
                         Descargar CV
                     </a>
                     <div class="head-right-subitems">
                         <a class="head-right-subitem" href="mailto:danielherreradeveloper@gmail.com" rel="noreferrer"
-                            aria-label="Enviar email"><i class="fa-solid fa-envelope"></i></a>
+                            aria-label="Enviar email">
+                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        </a>
                         <a class="head-right-subitem" href="https://linkedin.com/in/danielfrancoherrera" target="_blank"
-                            rel="noopener noreferrer" aria-label="Perfil de LinkedIn"><i
-                                class="fa-brands fa-linkedin"></i></a>
+                            rel="noopener noreferrer" aria-label="Perfil de LinkedIn" title="Se abre en una nueva pestaña">
+                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                        </a>
                         <a class="head-right-subitem" href="https://github.com/DanielHerrer" target="_blank"
-                            rel="noopener noreferrer" aria-label="Perfil de GitHub"><i
-                                class="fa-brands fa-github"></i></a>
+                            rel="noopener noreferrer" aria-label="Perfil de GitHub" title="Se abre en una nueva pestaña">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        </a>
                     </div>
                 </div>
-
             </div>
         </header>
 
         <div class="container-body">
 
-            <div id="formacion" class="container-field">
+            <!-- FORMACIÓN -->
+            <section id="formacion" class="container-field" role="region" aria-labelledby="title-1">
                 <div class="field">
-                    <img class="img-field" src="./imgs/field_1.png" alt="">
+                    <img class="img-field" src="./imgs/field_1.png" alt="Ilustración educación">
                     <div class="field-about">
-                        <div class="field-title" id="title-1">Formación Académica</div>
-                        <div class="field-description" id="description-1">Experiencia adquirida mediante trayectos de
-                            carácter académico.</div>
+                        <h2 class="field-title" id="title-1">Formación Académica</h2>
+                        <p class="field-description" id="description-1">Experiencia adquirida mediante trayectos de
+                            carácter académico.</p>
                     </div>
                     <div class="field-content">
+                        <div class="timeline" aria-label="Línea de tiempo de formación">
 
-                        <div class="timeline">
-
-                            <div class="timeline-item left">
+                            <article class="timeline-item left">
                                 <a class="timeline-img" href="https://mdp.utn.edu.ar" target="_blank"
-                                    rel="noopener noreferrer">
-                                    <img src="./imgs/academy_utn.jpg" alt="Logo Universidad Tecnologica Nacional">
+                                    rel="noopener noreferrer" title="Sitio de la UTN">
+                                    <img src="./imgs/academy_utn.jpg" alt="Logo Universidad Tecnológica Nacional">
                                 </a>
                                 <div class="timeline-content" style="opacity: 1;">
-                                    <h3>'Técnico Universitario en Programación'</h3>
-                                    <p class="academia">Universidad Técnologica Nacional · Mar del Plata</p>
-                                    <p class="fecha" style="color: rgb(0, 132, 255);">En curso (Finalizando)</p>
+                                    <h3>Técnico Universitario en Programación</h3>
+                                    <p class="academia">Universidad Tecnológica Nacional · Mar del Plata</p>
+                                    <p id="en-curso" class="fecha" style="color: rgb(0, 132, 255);">En curso (Finalizando)</p>
                                 </div>
-                            </div>
+                            </article>
 
-                            <div class="timeline-item right">
+                            <article class="timeline-item right">
                                 <a class="timeline-img" href="https://www.aluracursos.com" target="_blank"
-                                    rel="noopener noreferrer">
+                                    rel="noopener noreferrer" title="Sitio de Alura Latam">
                                     <img src="./imgs/academy_alura.jpg" alt="Logo Alura Latam">
                                 </a>
                                 <div class="timeline-content">
                                     <h3>Backend Developer en Java</h3>
                                     <p class="academia" style="opacity: 0.95;">Alura Latam · Oracle Next Education G5
                                     </p>
-                                    <p class="fecha">Noviembre 2023</p>
+                                    <p class="fecha"><time datetime="2023-11">Noviembre 2023</time></p>
                                     <a class="btn-certificado btn-right"
                                         href="https://app.aluracursos.com/program/certificate/d7df6f22-2f1e-4f8c-9dad-85bce34baf3b"
-                                        target="_blank" rel="noopener noreferrer">
-                                        Ver certificado
+                                        target="_blank" rel="noopener noreferrer" title="Ver certificado (nueva pestaña)">
+                                        ...
                                     </a>
                                 </div>
+                            </article>
 
-                            </div>
-
-                            <div class="timeline-item left">
+                            <article class="timeline-item left">
                                 <a class="timeline-img" href="https://egg.live/es/home" target="_blank"
-                                    rel="noopener noreferrer">
+                                    rel="noopener noreferrer" title="Sitio de Egg Live">
                                     <img src="./imgs/academy_egg.jpg" alt="Logo Egg Live">
                                 </a>
                                 <div class="timeline-content">
-                                    <h3>'Programación Full Stack'</h3>
+                                    <h3>Programación Full Stack</h3>
                                     <p class="academia" style="opacity: 0.9;">Egg Live · Argentina Programa 4.0</p>
-                                    <p class="fecha">Septiembre 2023</p>
+                                    <p class="fecha"><time datetime="2023-09">Septiembre 2023</time></p>
                                     <a class="btn-certificado btn-right"
                                         href="https://www.linkedin.com/in/danielfrancoherrera/details/education/1705426944387/single-media-viewer/?profileId=ACoAADfEVbUB26d36CHG2Y8fwUAVfDvcInmWh1w"
-                                        target="_blank" rel="noopener noreferrer">
-                                        Ver certificado
+                                        target="_blank" rel="noopener noreferrer" title="Ver certificado (nueva pestaña)">
+                                        ...
                                     </a>
                                 </div>
-                            </div>
+                            </article>
 
-                            <div class="timeline-item right">
+                            <article class="timeline-item right">
                                 <a class="timeline-img" href="https://www.linkedin.com/company/nicsantech/"
-                                    target="_blank" rel="noopener noreferrer">
+                                    target="_blank" rel="noopener noreferrer" title="Nicsan Tech en LinkedIn">
                                     <img src="./imgs/academy_nicsan.jpg" alt="Logo Nicsan Tech">
                                 </a>
                                 <div class="timeline-content" style="opacity: 0.85;">
-                                    <h3>'Web Full Stack en Javascript'</h3>
+                                    <h3>Web Full Stack en Javascript</h3>
                                     <p class="academia">MDP Programa · Constana / Nicsan Tech</p>
-                                    <p class="fecha">Junio 2023</p>
+                                    <p class="fecha"><time datetime="2023-06">Junio 2023</time></p>
                                     <a class="btn-certificado btn-right"
                                         href="https://www.linkedin.com/in/danielfrancoherrera/details/certifications/1729891805026/single-media-viewer/?profileId=ACoAADfEVbUB26d36CHG2Y8fwUAVfDvcInmWh1w"
-                                        target="_blank" rel="noopener noreferrer">
-                                        Ver certificado
+                                        target="_blank" rel="noopener noreferrer" title="Ver certificado (nueva pestaña)">
+                                        ...
                                     </a>
                                 </div>
-                            </div>
+                            </article>
 
-                            <div class="timeline-item left">
+                            <article class="timeline-item left">
                                 <a class="timeline-img" href="https://unioninformatica.org" target="_blank"
-                                    rel="noopener noreferrer">
+                                    rel="noopener noreferrer" title="Sitio de Unión Informática">
                                     <img src="./imgs/academy_ui.jpg" alt="Logo Unión Informática">
                                 </a>
                                 <div class="timeline-content" style="opacity: 0.8;">
                                     <h3>Base de datos en SQL Server</h3>
                                     <p class="academia">Unión Informática</p>
-                                    <p class="fecha">Abril 2023</p>
+                                    <p class="fecha"><time datetime="2023-04">Abril 2023</time></p>
                                     <a class="btn-certificado btn-right"
                                         href="https://www.linkedin.com/in/danielfrancoherrera/details/certifications/1635555300973/single-media-viewer/?profileId=ACoAADfEVbUB26d36CHG2Y8fwUAVfDvcInmWh1w"
-                                        target="_blank" rel="noopener noreferrer">
-                                        Ver certificado
+                                        target="_blank" rel="noopener noreferrer" title="Ver certificado (nueva pestaña)">
+                                        ...
                                     </a>
                                 </div>
-                            </div>
+                            </article>
 
-                            <div class="timeline-item right">
+                            <article class="timeline-item right">
                                 <a class="timeline-img" href="https://tecnica2mardel.wordpress.com" target="_blank"
-                                    rel="noopener noreferrer">
-                                    <img src="./imgs/academy_eest2.jpg" alt="Logo E.E.S.T. N2">
+                                    rel="noopener noreferrer" title="E.E.S.T. Nº 2">
+                                    <img src="./imgs/academy_eest2.jpg" alt="Logo E.E.S.T. Nº 2 Educación y Trabajo">
                                 </a>
                                 <div class="timeline-content" style="opacity: 0.75;">
-                                    <h3>'Técnico en Informática Personal y Profesional'</h3>
+                                    <h3>Técnico en Informática Personal y Profesional</h3>
                                     <p class="academia">E.E.S.T. Nº 2 "Educación y Trabajo"</p>
-                                    <p class="fecha">Febrero 2020</p>
+                                    <p class="fecha"><time datetime="2020-02">Febrero 2020</time></p>
                                     <a class="btn-certificado btn-right"
                                         href="https://www.linkedin.com/in/danielfrancoherrera/details/education/1635540934127/single-media-viewer/?profileId=ACoAADfEVbUB26d36CHG2Y8fwUAVfDvcInmWh1w"
-                                        target="_blank" rel="noopener noreferrer">
-                                        Ver certificado
+                                        target="_blank" rel="noopener noreferrer" title="Ver certificado (nueva pestaña)">
+                                        ...
                                     </a>
                                 </div>
-                            </div>
+                            </article>
 
                         </div>
 
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div id="proyectos" class="container-field">
+            <!-- PROYECTOS DESTACADOS -->
+            <section id="proyectos" class="container-field" role="region" aria-labelledby="title-2">
                 <div class="field">
-                    <img class="img-field" src="./imgs/field_3.png" alt="">
+                    <img class="img-field" src="./imgs/field_3.png" alt="Ilustración proyectos">
                     <div class="field-about">
-                        <div class="field-title" id="title-2">Proyectos Destacados</div>
-                        <div class="field-description" id="description-2">Desafíos técnicos que aplican las técnologías
-                            aprendidas.</div>
+                        <h2 class="field-title" id="title-2">Proyectos Destacados</h2>
+                        <p class="field-description" id="description-2">Desafíos técnicos que aplican las tecnologías
+                            aprendidas.</p>
                     </div>
                     <div class="field-content-web">
 
                         <a class="card-web" href="https://danielherrer.github.io/import_tech" target="_blank"
-                            rel="noopener noreferrer">
-                            <img src="./imgs/web_import_tech.jpg" alt="web">
-                            <h1 class="card-title">Import Tech BA</h1>
-                            <h2 class="card-subtitle">Tienda online · Web e-commerce</h2>
-                            <div class="card-about">
-                                <i class="fa-brands fa-html5"></i>
-                                <i class="fa-brands fa-css3-alt"></i>
-                                <i class="fa-brands fa-js"></i>
-                                <i class="fa-brands fa-github"></i>
+                            rel="noopener noreferrer" role="article" aria-label="Import Tech BA, tienda online">
+                            <img src="./imgs/web_import_tech.jpg" alt="Captura del proyecto Import Tech BA">
+                            <h3 class="card-title">Import Tech BA</h3>
+                            <p class="card-subtitle">Tienda online · Web e-commerce</p>
+                            <div class="card-about" aria-label="Tecnologías usadas">
+                                <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                                <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
+                                <i class="fa-brands fa-js" aria-hidden="true"></i>
+                                <i class="fa-brands fa-github" aria-hidden="true"></i>
                             </div>
                         </a>
 
                         <a class="card-web" href="https://danielherrer.github.io/petFinderMDP_web/index.html"
-                            target="_blank" rel="noopener noreferrer">
-                            <img src="./imgs/web_petfindermdp.jpg" alt="web">
-                            <h1 class="card-title">PetFinderMDP</h1>
-                            <h2 class="card-subtitle">Portal de mascotas · API Rest + Frontend</h2>
-                            <div class="card-about">
-                                <i class="fa-brands fa-java"></i>
-                                <i class="fa-solid fa-database"></i>
-                                <i class="fa-brands fa-html5"></i>
-                                <i class="fa-brands fa-css3-alt"></i>
-                                <i class="fa-brands fa-js"></i>
-                                <i class="fa-brands fa-github"></i>
+                            target="_blank" rel="noopener noreferrer" role="article" aria-label="PetFinderMDP, portal de mascotas">
+                            <img src="./imgs/web_petfindermdp.jpg" alt="Captura del proyecto PetFinderMDP">
+                            <h3 class="card-title">PetFinderMDP</h3>
+                            <p class="card-subtitle">Portal de mascotas · API Rest + Frontend</p>
+                            <div class="card-about" aria-label="Tecnologías usadas">
+                                <i class="fa-brands fa-java" aria-hidden="true"></i>
+                                <i class="fa-solid fa-database" aria-hidden="true"></i>
+                                <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                                <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
+                                <i class="fa-brands fa-js" aria-hidden="true"></i>
+                                <i class="fa-brands fa-github" aria-hidden="true"></i>
                             </div>
                         </a>
 
                         <a class="card-web" href="https://github.com/DanielHerrer/TP_Hangar2_UTN/" target="_blank"
-                            rel="noopener noreferrer">
-                            <img src="./imgs/web_hangar2.jpg" alt="web">
-                            <h1 class="card-title">Sistema Hangar 2.0</h1>
-                            <h2 class="card-subtitle">Radar de aviones · App Java + JSON</h2>
-                            <div class="card-about">
-                                <i class="fa-brands fa-java"></i>
-                                <i class="fa-regular fa-file-code"></i>
-                                <i class="fa-brands fa-github"></i>
+                            rel="noopener noreferrer" role="article" aria-label="Sistema Hangar 2.0, radar de aviones">
+                            <img src="./imgs/web_hangar2.jpg" alt="Captura del proyecto Sistema Hangar 2.0">
+                            <h3 class="card-title">Sistema Hangar 2.0</h3>
+                            <p class="card-subtitle">Radar de aviones · App Java + JSON</p>
+                            <div class="card-about" aria-label="Tecnologías usadas">
+                                <i class="fa-brands fa-java" aria-hidden="true"></i>
+                                <i class="fa-regular fa-file-code" aria-hidden="true"></i>
+                                <i class="fa-brands fa-github" aria-hidden="true"></i>
                             </div>
                         </a>
 
                         <a class="card-web" href="https://danielherrer.github.io/italina/" target="_blank"
-                            rel="noopener noreferrer">
-                            <img src="./imgs/web_italina.jpg" alt="web">
-                            <h1 class="card-title">Italina Shop</h1>
-                            <h2 class="card-subtitle">Tienda online · Web e-commerce</h2>
-                            <div class="card-about">
-                                <i class="fa-brands fa-html5"></i>
-                                <i class="fa-brands fa-css3-alt"></i>
-                                <i class="fa-brands fa-js"></i>
-                                <i class="fa-brands fa-github"></i>
+                            rel="noopener noreferrer" role="article" aria-label="Italina Shop, tienda online">
+                            <img src="./imgs/web_italina.jpg" alt="Captura del proyecto Italina Shop">
+                            <h3 class="card-title">Italina Shop</h3>
+                            <p class="card-subtitle">Tienda online · Web e-commerce</p>
+                            <div class="card-about" aria-label="Tecnologías usadas">
+                                <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                                <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
+                                <i class="fa-brands fa-js" aria-hidden="true"></i>
+                                <i class="fa-brands fa-github" aria-hidden="true"></i>
                             </div>
                         </a>
 
                         <a class="card-web" href="https://danielherrer.github.io/reparapp/" target="_blank"
-                            rel="noopener noreferrer">
-                            <img src="./imgs/web_reparapp.jpg" alt="web">
-                            <h1 class="card-title">ReparApp</h1>
-                            <h2 class="card-subtitle">Portal de trabajo · API Rest + Frontend</h2>
-                            <div class="card-about">
-                                <i class="fa-brands fa-java"></i>
-                                <i class="fa-solid fa-database"></i>
-                                <i class="fa-brands fa-html5"></i>
-                                <i class="fa-brands fa-css3-alt"></i>
-                                <i class="fa-brands fa-js"></i>
-                                <i class="fa-brands fa-github"></i>
+                            rel="noopener noreferrer" role="article" aria-label="ReparApp, portal de trabajo">
+                            <img src="./imgs/web_reparapp.jpg" alt="Captura del proyecto ReparApp">
+                            <h3 class="card-title">ReparApp</h3>
+                            <p class="card-subtitle">Portal de trabajo · API Rest + Frontend</p>
+                            <div class="card-about" aria-label="Tecnologías usadas">
+                                <i class="fa-brands fa-java" aria-hidden="true"></i>
+                                <i class="fa-solid fa-database" aria-hidden="true"></i>
+                                <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                                <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
+                                <i class="fa-brands fa-js" aria-hidden="true"></i>
+                                <i class="fa-brands fa-github" aria-hidden="true"></i>
                             </div>
                         </a>
 
-                        <a class="card-web" href="https://github.com/DanielHerrer/Challenge-Oracle-ONE-G5-HotelAlura"
-                            target="_blank" rel="noopener noreferrer">
-                            <img src="./imgs/web_hotelalura.jpg" alt="web">
-                            <h1 class="card-title">Hotel Alura</h1>
-                            <h2 class="card-subtitle">Sistema de reservas · App Java + JBDC</h2>
-                            <div class="card-about">
-                                <i class="fa-brands fa-java"></i>
-                                <i class="fa-solid fa-database"></i>
-                                <i class="fa-brands fa-github"></i>
+                        <a class="card-web"
+                            href="https://github.com/DanielHerrer/Challenge-Oracle-ONE-G5-HotelAlura"
+                            target="_blank" rel="noopener noreferrer" role="article" aria-label="Hotel Alura, sistema de reservas">
+                            <img src="./imgs/web_hotelalura.jpg" alt="Captura del proyecto Hotel Alura">
+                            <h3 class="card-title">Hotel Alura</h3>
+                            <p class="card-subtitle">Sistema de reservas · App Java + JDBC</p>
+                            <div class="card-about" aria-label="Tecnologías usadas">
+                                <i class="fa-brands fa-java" aria-hidden="true"></i>
+                                <i class="fa-solid fa-database" aria-hidden="true"></i>
+                                <i class="fa-brands fa-github" aria-hidden="true"></i>
                             </div>
                         </a>
 
                         <a class="card-web"
                             href="https://github.com/DanielHerrer/Challenge-Oracle-ONE-G5-ConversorMoneda"
-                            target="_blank" rel="noopener noreferrer">
-                            <img src="./imgs/web_conversoralura.jpg" alt="web">
-                            <h1 class="card-title">Conversor de Moneda Alura</h1>
-                            <h2 class="card-subtitle">Conversor múltiple · App Java</h2>
-                            <div class="card-about">
-                                <i class="fa-brands fa-java"></i>
-                                <i class="fa-brands fa-github"></i>
+                            target="_blank" rel="noopener noreferrer" role="article" aria-label="Conversor de Moneda Alura">
+                            <img src="./imgs/web_conversoralura.jpg" alt="Captura del proyecto Conversor de Moneda Alura">
+                            <h3 class="card-title">Conversor de Moneda Alura</h3>
+                            <p class="card-subtitle">Conversor múltiple · App Java</p>
+                            <div class="card-about" aria-label="Tecnologías usadas">
+                                <i class="fa-brands fa-java" aria-hidden="true"></i>
+                                <i class="fa-brands fa-github" aria-hidden="true"></i>
                             </div>
                         </a>
 
                         <a class="card-web" href="https://danielherrer.github.io/encriptador-alura/" target="_blank"
-                            rel="noopener noreferrer">
-                            <img src="./imgs/web_encriptadoralura.jpg" alt="web">
-                            <h1 class="card-title">Encriptador Alura</h1>
-                            <h2 class="card-subtitle">Web decodificadora · Web Frontend</h2>
-                            <div class="card-about">
-                                <i class="fa-brands fa-html5"></i>
-                                <i class="fa-brands fa-css3-alt"></i>
-                                <i class="fa-brands fa-js"></i>
-                                <i class="fa-brands fa-github"></i>
+                            rel="noopener noreferrer" role="article" aria-label="Encriptador Alura, web decodificadora">
+                            <img src="./imgs/web_encriptadoralura.jpg" alt="Captura del proyecto Encriptador Alura">
+                            <h3 class="card-title">Encriptador Alura</h3>
+                            <p class="card-subtitle">Web decodificadora · Web Frontend</p>
+                            <div class="card-about" aria-label="Tecnologías usadas">
+                                <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                                <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
+                                <i class="fa-brands fa-js" aria-hidden="true"></i>
+                                <i class="fa-brands fa-github" aria-hidden="true"></i>
                             </div>
                         </a>
 
-
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <!-- _________________________________ PRACTICAS _________________________________ -->
-            <div id="practicas" class="container-field">
+            <!-- PRÁCTICAS Y DESARROLLO -->
+            <div id="practicas" class="container-field" role="region" aria-labelledby="title-3">
                 <fieldset class="field">
 
-                    <img class="img-field" src="./imgs/field_2.png" alt="">
+                    <img class="img-field" src="./imgs/field_2.png" alt="Ilustración prácticas">
                     <div class="field-about">
-                        <div class="field-title" id="title-3">Prácticas y Desarrollo</div>
-                        <div class="field-description" id="description-3">Diseños realizados con fines de aprendizaje.
-                        </div>
+                        <h2 class="field-title" id="title-3">Prácticas y Desarrollo</h2>
+                        <p class="field-description" id="description-3">Diseños realizados con fines de aprendizaje.
+                        </p>
                     </div>
 
                     <div class="field-content-web">
                         <a class="card-web"
                             href="https://danielherrer.github.io/CONSTANA_MDP_Programa/10_web_bootstrapLaboratorio/web/"
-                            target="_blank" rel="noopener noreferrer">
-                            <img src="./imgs/web_hazzerbootstrap.jpg" alt="web">
+                            target="_blank" rel="noopener noreferrer" role="article" aria-label="Hazzer Arts con Bootstrap">
+                            <img src="./imgs/web_hazzerbootstrap.jpg" alt="Captura del proyecto Hazzer Arts (Bootstrap)">
                             <h5 class="card-title">Hazzer Arts</h5>
-                            <div class="card-about">
-                                <i class="fa-brands fa-html5"></i>
-                                <i class="fa-brands fa-css3-alt"></i>
-                                <i class="fa-brands fa-bootstrap"></i>
+                            <div class="card-about" aria-label="Tecnologías usadas">
+                                <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                                <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
+                                <i class="fa-brands fa-bootstrap" aria-hidden="true"></i>
                             </div>
                         </a>
 
                         <a class="card-web" href="https://danielherrer.github.io/CONSTANA_MDP_Programa/12_web_memoTest/"
-                            target="_blank" rel="noopener noreferrer">
-                            <img src="./imgs/web_memotest.jpg" alt="web">
+                            target="_blank" rel="noopener noreferrer" role="article" aria-label="Memo Test en JavaScript">
+                            <img src="./imgs/web_memotest.jpg" alt="Captura del proyecto Memo Test">
                             <h5 class="card-title">Memo TEST</h5>
-                            <div class="card-about">
-                                <i class="fa-brands fa-html5"></i>
-                                <i class="fa-brands fa-css3-alt"></i>
-                                <i class="fa-brands fa-js"></i>
+                            <div class="card-about" aria-label="Tecnologías usadas">
+                                <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                                <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
+                                <i class="fa-brands fa-js" aria-hidden="true"></i>
                             </div>
                         </a>
 
                         <a class="card-web"
-                            href="danielherrer.github.io/CONSTANA_MDP_Programa/09_web_gridFlexLaboratorio/"
-                            target="_blank" rel="noopener noreferrer">
-                            <img src="./imgs/web_dnd.jpg" alt="web">
-                            <h5 class="card-title">D&D Merch</h5>
-                            <div class="card-about">
-                                <i class="fa-brands fa-html5"></i>
-                                <i class="fa-brands fa-css3-alt"></i>
+                            href="https://danielherrer.github.io/CONSTANA_MDP_Programa/09_web_gridFlexLaboratorio/"
+                            target="_blank" rel="noopener noreferrer" role="article" aria-label="D&D Merch maquetación">
+                            <img src="./imgs/web_dnd.jpg" alt="Captura del proyecto D&amp;D Merch">
+                            <h5 class="card-title">D&amp;D Merch</h5>
+                            <div class="card-about" aria-label="Tecnologías usadas">
+                                <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                                <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
                             </div>
                         </a>
 
                         <a class="card-web"
                             href="https://danielherrer.github.io/CONSTANA_MDP_Programa/06_web_comidasLaboratorio/"
-                            target="_blank" rel="noopener noreferrer">
-                            <img src="./imgs/web_constanaking.jpg" alt="web">
+                            target="_blank" rel="noopener noreferrer" role="article" aria-label="Constana King maquetación">
+                            <img src="./imgs/web_constanaking.jpg" alt="Captura del proyecto Constana King">
                             <h5 class="card-title">Constana King</h5>
-                            <div class="card-about">
-                                <i class="fa-brands fa-html5"></i>
-                                <i class="fa-brands fa-css3-alt"></i>
+                            <div class="card-about" aria-label="Tecnologías usadas">
+                                <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                                <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
                             </div>
                         </a>
 
                         <a class="card-web" href="https://danielherrer.github.io/techstore/" target="_blank"
-                            rel="noopener noreferrer">
-                            <img src="./imgs/web_techstore.jpg" alt="web">
+                            rel="noopener noreferrer" role="article" aria-label="Tech Store maquetación">
+                            <img src="./imgs/web_techstore.jpg" alt="Captura del proyecto Tech Store">
                             <h5 class="card-title">Tech Store</h5>
-                            <div class="card-about">
-                                <i class="fa-brands fa-html5"></i>
-                                <i class="fa-brands fa-css3-alt"></i>
+                            <div class="card-about" aria-label="Tecnologías usadas">
+                                <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                                <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
                             </div>
                         </a>
                     </div>
                 </fieldset>
             </div>
 
-            <div id="contacto" class="container-field">
+            <!-- CONTACTO -->
+            <section id="contacto" class="container-field" role="region" aria-labelledby="title-4">
                 <div class="field">
-                    <img class="img-field" src="./imgs/field_4.png" alt="">
+                    <img class="img-field" src="./imgs/field_4.png" alt="Ilustración contacto">
                     <div class="field-about">
-                        <div class="field-title" id="title-4">Información y Contacto</div>
-                        <div class="field-description" id="description-4">Cualquier medio de contacto disponible.</div>
+                        <h2 class="field-title" id="title-4">Información y Contacto</h2>
+                        <p class="field-description" id="description-4">Cualquier medio de contacto disponible.</p>
                     </div>
                     <div class="field-content">
+                        <!-- Podés añadir aquí un formulario de contacto accesible si lo deseás -->
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
     </main>
+
+    <footer role="contentinfo" class="footer">
+        <p>&copy; 2025 Daniel F. Herrera · Todos los derechos reservados</p>
+    </footer>
+
     <script src="./js/index.js"></script>
 </body>
 
