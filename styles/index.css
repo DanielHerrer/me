@@ -375,6 +375,21 @@ body {
     margin-left: -2px;
 }
 
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: -10px; /* ajustá según tu diseño */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+
+    /* Triángulo con dos palitos inclinados (flecha hacia abajo) */
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 12px solid #33a6e9; /* mismo color que la línea */
+}
+
 .timeline-item {
     padding: 0.25rem 1.25rem;
     position: relative;
