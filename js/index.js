@@ -19,6 +19,8 @@ btnTheme.addEventListener('click', () => {
     );
 });
 
+/* ============= ACTUALIZAR AÑO FOOTER ============================= */
+document.getElementById("year").textContent = new Date().getFullYear();
 
 /* =========================================================
    IDIOMA (es / en)
@@ -45,6 +47,15 @@ const translations = {
         'description-3': 'Designs made for learning purposes.',
         'title-4': 'Information and Contact',
         'description-4': 'Any means of contact available.',
+        'tag-4': 'Available for new projects',
+        'subtitle-4': 'Let'+"'"+'s do something',
+        'sub-subtitle-4': 'together',
+        'text-4': 'Do you have a web project or a proposal? Write to me and I'+"'"+'ll get back to you as soon as possible.',
+        'ubication-4': 'Ubication',
+        'name-4': 'Name',
+        'msg-4': 'Message',
+        'submit-4': 'Send message',
+        'note-4': 'I will reply within 48 hours.',
     },
     es: {
         'nav-1': 'Perfil',
@@ -64,6 +75,15 @@ const translations = {
         'description-3': 'Diseños realizados con fines de aprendizaje.',
         'title-4': 'Información y Contacto',
         'description-4': 'Cualquier medio de contacto disponible.',
+        'tag-4': 'Disponible para nuevos proyectos',
+        'subtitle-4': 'Hagamos algo',
+        'sub-subtitle-4': 'juntos',
+        'text-4': '¿Tenés un proyecto web o una propuesta? Escribime y te respondo a la brevedad.',
+        'ubication-4': 'Ubicación',
+        'name-4': 'Nombre',
+        'msg-4': 'Mensaje',
+        'submit-4': 'Enviar mensaje',
+        'note-4': 'Te respondo dentro de las 48 horas.',
     },
 };
 
@@ -94,12 +114,21 @@ function applyLanguage(lang) {
     document.documentElement.lang = lang;
 }
 
+function applyLanguagePlaceholders(lang) {
+  document.querySelectorAll("[data-es][data-en]").forEach(el => {
+    if ("placeholder" in el) {
+      el.placeholder = el.dataset[lang];
+    }
+  });
+}
+
 const btnLanguage = document.getElementById('btn-language');
 let currentLang = 'en'; // arranca en inglés
 
 btnLanguage.addEventListener('click', () => {
     currentLang = currentLang === 'en' ? 'es' : 'en';
     applyLanguage(currentLang);
+    applyLanguagePlaceholders(currentLang);
 });
 
 // Inicializa la página en el idioma por defecto.
